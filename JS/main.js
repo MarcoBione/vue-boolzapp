@@ -183,14 +183,17 @@ createApp({
                 visible: true,
             },
             currentChat : [],
+            currentMsg: [],
         }
     },
     methods: {
         //contact index
         searchIndex(id){
-                       
+
+            //load contact profile
             this.currentChat = this.contacts[id];
-            console.log(currentChat);
+            //load contact messages
+            this.currentMsg = this.contacts[id].messages;
 
         },
     }
