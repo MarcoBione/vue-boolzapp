@@ -15,17 +15,6 @@
     border: 1px solid red;
 }
 
-/* for stories img */
-._mysquare{
-    width: 4px;
-    height: 5px;
-    background-color: #E9EBEB;
-    position: absolute;
-    top: 1px;
-    left: 43%;
-}
-
-
 /* my profile */
 ._myprofile{
     width: 100%;
