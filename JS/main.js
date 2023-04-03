@@ -184,16 +184,30 @@ createApp({
             },
             currentChat : [],
             currentMsg: [],
+            mex: [],
+            writedMex: [],
         }
     },
     methods: {
         //contact index
         searchIndex(id){
 
+            this.mex = [];
+
             //load contact profile
             this.currentChat = this.contacts[id];
-            //load contact messages
-            this.currentMsg = this.contacts[id].messages;
+            console.log(this.currentChat);
+
+            //cycle msg stamp
+            for(let i = 0; i < this.currentChat.messages.length; i++){
+
+                let msgs = (this.currentChat.messages[i]);
+
+                this.mex.push(msgs);
+
+            }
+            //console.log(this.msgs);
+            console.log(this.mex);
 
         },
     }
