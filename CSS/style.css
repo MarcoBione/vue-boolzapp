@@ -61,3 +61,24 @@
 ._myprofileicons>span>i{
     cursor: pointer;
 }
+/* profile classes end */
+
+
+/* notification */
+._mynotifications>span>i{
+    padding: 15px 13px 15px 13px;
+    background-color: white;
+    border-radius: 50%;
+    color: #8EDAFC;
+}
+
+._mynotifications{
+    padding: 15px 5px;
+    background-color: #8EDAFC;
+}
+
+._myoption{
+    font-size: 0.9rem;
+    padding-left: 5px;
+}
+
