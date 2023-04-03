@@ -42,6 +42,7 @@
 
 ._myprofileinfo:hover{
     background-color: #E9EBEB;
+    cursor: pointer;
 }
 
 ._myprofileinfo>span{
