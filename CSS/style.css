@@ -22,3 +22,12 @@
     height: 50px;
     border: 1px solid green;
 }
+
+._mysquare{
+    width: 4px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 1px;
+    left: 43%;
+}
