@@ -87,9 +87,9 @@
                     <!-- /search box -->
 
                     <!-- contact list -->
-                    <div class="contacts">
+                    <div class="_mycontacts">
 
-                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id">
+                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id" @click="searchIndex(index)">
 
                             <!-- user photo -->
                             <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
@@ -107,22 +107,22 @@
                 </div>
 
                 <!-- mainpart -->
-                <div class="_mainapp">
+                <div class="_mainapp d-flex flex-column justify-content-between">
 
+                    <!-- profile banner -->
                     <div class="_myprofile d-flex justify-content-between">
 
                         
                         <!-- profile name -->
                         <div class="_myprofileinfo">
-                        
+
                             <!-- user photo -->
-                            <!-- <img :src="contacts.avatar" alt="profile of {{contacts.name}}" class="_myphoto"> -->
-                            
+                            <img :src="currentChat.avatar" alt="profile of {{currentChat.name}}" class="_myphoto">
 
                             <!-- user name -->
-                            <!-- <span>
-                                <p class="m-0">{{contacts.name}}</p>
-                            </span> -->
+                            <span>
+                                <p class="m-0">{{currentChat.name}}</p>
+                            </span>
 
                         </div>
                         
@@ -142,6 +142,25 @@
                         </div>
 
                     </div>
+                    <!-- /profile banner -->
+
+                    <!-- message area -->
+                    <div class="_mymessagearea">
+
+                    </div>
+                    <!-- /message area -->
+
+                    <!-- text area -->
+                    <div class="_mytextarea d-flex py-2">
+
+                        <button class="btn"><i class="fa-regular fa-face-smile"></i></button>
+
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+
+                        <button class="btn"><i class="fa-solid fa-microphone"></i></button>
+
+                    </div>
+                    <!-- /text area -->
 
                 </div>
 

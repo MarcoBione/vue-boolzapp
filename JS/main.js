@@ -181,10 +181,17 @@ createApp({
                 name: 'Marco',
                 avatar: './img/avatar_1.jpg',
                 visible: true,
-            }
+            },
+            currentChat : [],
         }
     },
     methods: {
+        //contact index
+        searchIndex(id){
+                       
+            this.currentChat = this.contacts[id];
+            console.log(currentChat);
 
+        },
     }
 }).mount('#app');
