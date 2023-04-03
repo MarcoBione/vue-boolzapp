@@ -38,7 +38,9 @@
                             <img :src="profile.avatar" alt="profile of {{profile.name}}" class="_myphoto">
 
                             <!-- user name -->
-                            <span><p>{{profile.name}}</p></span>
+                            <span>
+                                <p>{{profile.name}}</p>
+                            </span>
 
                         </div>
 
@@ -46,13 +48,13 @@
                         <div class="_myprofileicons">
 
                             <!-- stories -->
-                            <span class="px-2 position-relative">
+                            <span class="px-3 position-relative">
                                 <div class="_mysquare"></div><i class="fa-regular fa-circle"></i>
                             </span>
                             <!-- messages -->
                             <span><i class="fa-solid fa-message"></i></span>
                             <!-- three dots -->
-                            <span class="px-2"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="px-3"><i class="fa-solid fa-ellipsis-vertical"></i></span>
 
                         </div>
 
@@ -74,6 +76,13 @@
 
                     </div>
                     <!-- /notifications box-->
+
+                    <!-- search box -->
+                    <div class="_mysearchbox input-group">
+                        <span class="input-group-text border-0" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control shadow-none border-0" placeholder="Cerca">
+                    </div>
+                    <!-- /search box -->
 
                 </div>
 
