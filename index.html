@@ -80,9 +80,27 @@
                     <!-- search box -->
                     <div class="_mysearchbox input-group">
                         <span class="input-group-text border-0" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control shadow-none border-0" placeholder="Cerca">
+                        <input type="text" class="form-control shadow-none border-0" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- /search box -->
+
+                    <!-- contact list -->
+                    <div class="contacts">
+
+                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id">
+
+                            <!-- user photo -->
+                            <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
+
+                            <!-- user name -->
+                            <span>
+                                <p>{{contact.name}}</p>
+                            </span>
+
+                        </div>
+                        
+                    </div>
+                    <!-- /contact list -->
 
                 </div>
 

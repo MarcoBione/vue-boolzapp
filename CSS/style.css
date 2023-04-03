@@ -40,6 +40,10 @@
     padding: 5px;
 }
 
+._myprofileinfo:hover{
+    background-color: #E9EBEB;
+}
+
 ._myprofileinfo>span{
     position: absolute;
     top:25%;
