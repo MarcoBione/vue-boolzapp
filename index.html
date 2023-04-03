@@ -147,11 +147,14 @@
                     <!-- message area -->
                     <div class="_mymessagearea">
 
-                        <div class="messages">
+                        <div class="messages" v-for="msg in mex">
 
-                            <div class="mex" v-for="msg in mex">
-                                {{msg.message}}
+                            <div class="line d-flex" :class="msg.status === 'sent' ? '_myright' :''">
+                                <div class="mex" :class="msg.status === 'sent' ? '_mysent' : '_myrecieved'">
+                                    {{msg.message}}
+                                </div>
                             </div>
+                            
 
                         </div>
 

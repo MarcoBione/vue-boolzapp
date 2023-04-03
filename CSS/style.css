@@ -1,22 +1,22 @@
-._mywrapper{
+._mywrapper {
     height: 100vh;
     width: 100%;
 }
 
-._sidebar{
+._sidebar {
     height: 100vh;
     width: 300px;
     border: 1px solid black;
 }
 
-._mainapp{
+._mainapp {
     height: 100vh;
     width: calc(100% - 300px);
     border: 1px solid red;
 }
 
 /* my profile */
-._myprofile{
+._myprofile {
     width: 100%;
     height: 50px;
     border: 1px solid green;
@@ -24,24 +24,24 @@
 }
 
 /* profile img */
-._myprofileinfo{
+._myprofileinfo {
     position: relative;
     padding: 5px;
 }
 
-._myprofileinfo:hover{
+._myprofileinfo:hover {
     background-color: #E9EBEB;
     cursor: pointer;
 }
 
-._myprofileinfo>span{
+._myprofileinfo>span {
     position: absolute;
-    top:25%;
+    top: 25%;
     width: 100px;
     padding-left: 5px;
 }
 
-._myphoto{
+._myphoto {
     width: 40px;
     border-radius: 50%;
 }
@@ -49,32 +49,33 @@
 /* profile img classes end */
 
 /* profile icons */
-._myprofileicons{
+._myprofileicons {
     display: flex;
     align-items: center;
     color: darkgray;
 }
 
-._myprofileicons>span>i{
+._myprofileicons>span>i {
     cursor: pointer;
 }
+
 /* profile classes end */
 
 
 /* notification */
-._mynotifications>span>i{
+._mynotifications>span>i {
     padding: 15px 13px 15px 13px;
     background-color: white;
     border-radius: 50%;
     color: #8EDAFC;
 }
 
-._mynotifications{
+._mynotifications {
     padding: 15px 5px;
     background-color: #8EDAFC;
 }
 
-._myoption{
+._myoption {
     font-size: 0.9rem;
     padding-left: 5px;
 }
@@ -83,26 +84,45 @@
 
 /* search bar */
 
-._mysearchbox{
+._mysearchbox {
     padding: 5px;
     background-color: #E9EBEB;
 }
 
 /* contacts area */
-._mycontacts{
+._mycontacts {
     height: calc(100% - 172px);
     overflow-y: auto;
 }
 
 /* textarea */
-._mytextarea{
-    background-color:#E9EBEB;
+._mytextarea {
+    background-color: #E9EBEB;
 }
 
 /* message area */
-._mymessagearea{
+._mymessagearea {
     border: 1px solid blueviolet;
     height: calc(100% - 104px);
     background-image: url(../img/mine.jpg);
+    padding : 15px 38px 15px 42px;
 }
 
+/* message */
+.mex{
+    box-shadow: 2px 2px 5px darkgray;
+    border-radius: 9px;
+    padding: 2px 4px;
+}
+._mysent {
+    background-color: greenyellow;
+}
+
+._myright{
+    justify-content: end;
+}
+
+._myrecieved {
+    background-color: white;
+    justify-content: start;
+}

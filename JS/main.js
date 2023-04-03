@@ -196,7 +196,7 @@ createApp({
 
             //load contact profile
             this.currentChat = this.contacts[id];
-            console.log(this.currentChat);
+            //console.log(this.currentChat);
 
             //cycle msg stamp
             for(let i = 0; i < this.currentChat.messages.length; i++){
@@ -207,7 +207,7 @@ createApp({
 
             }
             //console.log(this.msgs);
-            console.log(this.mex);
+            //console.log(this.mex);
 
         },
     }
