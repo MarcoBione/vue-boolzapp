@@ -35,10 +35,10 @@
                         <div class="_myprofileinfo">
 
                             <!-- user photo -->
-                            <img src="" alt="" class="_myphoto">
+                            <img :src="profile.avatar" alt="profile of {{profile.name}}" class="_myphoto">
 
                             <!-- user name -->
-                            <span>*name*</span>
+                            <span><p>{{profile.name}}</p></span>
 
                         </div>
 
@@ -46,11 +46,13 @@
                         <div class="_myprofileicons">
 
                             <!-- stories -->
-                            <span class="px-1 position-relative"><div class="_mysquare"></div><i class="fa-regular fa-circle"></i></span>
+                            <span class="px-2 position-relative">
+                                <div class="_mysquare"></div><i class="fa-regular fa-circle"></i>
+                            </span>
                             <!-- messages -->
                             <span><i class="fa-solid fa-message"></i></span>
                             <!-- three dots -->
-                            <span class="px-1"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="px-2"><i class="fa-solid fa-ellipsis-vertical"></i></span>
 
                         </div>
 

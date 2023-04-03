@@ -15,6 +15,16 @@
     border: 1px solid red;
 }
 
+/* for stories img */
+._mysquare{
+    width: 4px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 1px;
+    left: 43%;
+}
+
 
 /* my profile */
 ._myprofile{
@@ -23,11 +33,31 @@
     border: 1px solid green;
 }
 
-._mysquare{
-    width: 4px;
-    height: 5px;
-    background-color: white;
+/* profile img */
+._myprofileinfo{
+    position: relative;
+    padding: 5px;
+}
+
+._myprofileinfo>span{
     position: absolute;
-    top: 1px;
-    left: 43%;
+    top:25%;
+    padding-left: 5px;
+}
+
+._myphoto{
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* profile img classes end */
+
+/* profile icons */
+._myprofileicons{
+    display: flex;
+    align-items: center;
+}
+
+._myprofileicons>span>i{
+    cursor: pointer;
 }
