@@ -189,13 +189,6 @@ createApp({
             writedMex: '', //messaggio scritto dall'utente
 
             writedMessages: [],//array dei messaggi scritti da stampare
-
-            //template per i messaggi
-            newMessageTemplate: {
-                date: '', //dataTime.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
-                message: '',
-                status: 'sent',
-            }
         }
     },
     methods: {
@@ -222,16 +215,19 @@ createApp({
 
         },
         //display writed mex
-        pushNewMessage(id) {
+        pushNewMessage() {
             const dataT = luxon.DataTime;
             
-            this.newMessageTemplate={
+            const newMessageTemplate={
                 date: '',//dataT.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
                 message: this.writedMex,
                 status: 'sent',
             };
             
-            this.contacts
+            console.log(this.currentChat);
+            console.log(this.contacts);
+            console.log(this.contacts[this.currentChat].messages);
+            //this.contacts[id].messages.push(newMessageTemplate);
 
         },
 
