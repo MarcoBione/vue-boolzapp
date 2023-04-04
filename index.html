@@ -157,7 +157,7 @@
                             
 
                         </div>
-
+                        
                     </div>
                     <!-- /message area -->
 
@@ -166,7 +166,7 @@
 
                         <button class="btn"><i class="fa-regular fa-face-smile"></i></button>
 
-                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio" v-model="writedMex" @keyup.enter="pushNewMessage()">
 
                         <button class="btn"><i class="fa-solid fa-microphone"></i></button>
 
@@ -186,7 +186,7 @@
     <!-- luxon -->
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
     <!-- vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src=" https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
     <!-- script main -->
     <script src="./JS/main.js"></script>
 </body>

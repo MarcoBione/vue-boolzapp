@@ -1,4 +1,4 @@
-const { createApp } = Vue;
+const {createApp} = Vue;
 
 createApp({
 
@@ -182,16 +182,27 @@ createApp({
                 avatar: './img/avatar_1.jpg',
                 visible: true,
             },
-            currentChat : [],
+            currentChat: [],
             currentMsg: [],
             mex: [],
-            writedMex: [],
+
+            writedMex: '', //messaggio scritto dall'utente
+
+            writedMessages: [],//array dei messaggi scritti da stampare
+
+            //template per i messaggi
+            newMessageTemplate: {
+                date: '', //dataTime.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
+                message: '',
+                status: 'sent',
+            }
         }
     },
     methods: {
         //contact index
-        searchIndex(id){
+        searchIndex(id) {
 
+            //array of messages
             this.mex = [];
 
             //load contact profile
@@ -199,7 +210,7 @@ createApp({
             //console.log(this.currentChat);
 
             //cycle msg stamp
-            for(let i = 0; i < this.currentChat.messages.length; i++){
+            for (let i = 0; i < this.currentChat.messages.length; i++) {
 
                 let msgs = (this.currentChat.messages[i]);
 
@@ -210,5 +221,22 @@ createApp({
             //console.log(this.mex);
 
         },
+        //display writed mex
+        pushNewMessage() {
+            const dataT = luxon.DataTime;
+            
+            this.newMessageTemplate={
+                date: '',//dataT.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
+                message: this.writedMex,
+                status: 'sent',
+            };
+            this.currentChat.messages.push(this.newMessageTemplate);
+            //console.log(this.currentChat);
+
+            this.writedMessages.push(this.currentChat.messages)
+            console.log(this.writedMessages);            
+
+        },
+
     }
 }).mount('#app');
