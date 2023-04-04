@@ -222,7 +222,7 @@ createApp({
 
         },
         //display writed mex
-        pushNewMessage() {
+        pushNewMessage(id) {
             const dataT = luxon.DataTime;
             
             this.newMessageTemplate={
@@ -230,11 +230,8 @@ createApp({
                 message: this.writedMex,
                 status: 'sent',
             };
-            this.currentChat.messages.push(this.newMessageTemplate);
-            //console.log(this.currentChat);
-
-            this.writedMessages.push(this.currentChat.messages)
-            console.log(this.writedMessages);            
+            
+            this.contacts
 
         },
 

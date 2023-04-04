@@ -147,16 +147,16 @@
                     <!-- message area -->
                     <div class="_mymessagearea">
 
-                        <div class="messages" v-for="msg in mex">
+                        <ul class="messages" v-for="msg in mex">
 
-                            <div class="line d-flex" :class="msg.status === 'sent' ? '_myright' :''">
+                            <li class="line d-flex" :class="msg.status === 'sent' ? '_myright' :''">
                                 <div class="mex" :class="msg.status === 'sent' ? '_mysent' : '_myrecieved'">
                                     {{msg.message}}
                                 </div>
-                            </div>
+                            </li>
                             
 
-                        </div>
+                        </ul>
                         
                     </div>
                     <!-- /message area -->
@@ -166,7 +166,7 @@
 
                         <button class="btn"><i class="fa-regular fa-face-smile"></i></button>
 
-                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio" v-model="writedMex" @keyup.enter="pushNewMessage()">
+                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio" v-model="writedMex" @keyup.enter="pushNewMessage(index)">
 
                         <button class="btn"><i class="fa-solid fa-microphone"></i></button>
 
