@@ -113,6 +113,7 @@
     box-shadow: 2px 2px 5px darkgray;
     border-radius: 9px;
     padding: 2px 4px;
+    margin-bottom: 10px;
 }
 ._mysent {
     background-color: greenyellow;
