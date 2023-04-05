@@ -117,11 +117,11 @@
                         <div class="_myprofileinfo">
 
                             <!-- user photo -->
-                            <img :src="contacts.avatar" alt="profile of {{contacts.name}}" class="_myphoto">
+                            <img :src="contacts[currentChat].avatar" alt="profile of {{contacts[currentChat].name}}" class="_myphoto">
 
                             <!-- user name -->
                             <span>
-                                <p class="m-0">{{contacts.name}}</p>
+                                <p class="m-0">{{contacts[currentChat].name}}</p>
                             </span>
 
                         </div>
