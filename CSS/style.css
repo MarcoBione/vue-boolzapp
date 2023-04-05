@@ -126,3 +126,7 @@
     background-color: white;
     justify-content: start;
 }
+
+._mydatestring{
+    font-size: 0.7rem;
+}
