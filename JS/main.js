@@ -199,19 +199,19 @@ createApp({
             this.mex = [];
 
             //load contact profile
-            this.currentChat = this.contacts[id];
-            //console.log(this.currentChat);
+            this.currentChat = id;
+            console.log(this.currentChat);
 
             //cycle msg stamp
-            for (let i = 0; i < this.currentChat.messages.length; i++) {
+            for (let i = 0; i < this.contacts[this.currentChat].messages.length; i++) {
 
-                let msgs = (this.currentChat.messages[i]);
+                let msgs = (this.contacts[this.currentChat].messages[i]);
 
                 this.mex.push(msgs);
 
             }
             //console.log(this.msgs);
-            //console.log(this.mex);
+            console.log(this.mex);
 
         },
         //display writed mex
@@ -224,10 +224,9 @@ createApp({
                 status: 'sent',
             };
             
-            console.log(this.currentChat);
-            console.log(this.contacts);
             console.log(this.contacts[this.currentChat].messages);
-            //this.contacts[id].messages.push(newMessageTemplate);
+            this.contacts[this.currentChat].messages.push(newMessageTemplate);
+            console.log(this.contacts[this.currentChat].messages);
 
         },
 

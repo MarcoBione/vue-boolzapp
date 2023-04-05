@@ -92,7 +92,7 @@
                         <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id" @click="searchIndex(index)">
 
                             <!-- user photo -->
-                            <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
+                            <img :src="contact.avatar" alt="profile of {{contact[index].name}}" class="_myphoto">
 
                             <!-- user name -->
                             <span>
@@ -117,7 +117,7 @@
                         <div class="_myprofileinfo">
 
                             <!-- user photo -->
-                            <img :src="currentChat.avatar" alt="profile of {{currentChat.name}}" class="_myphoto">
+                            <img :src="currentChat.avatar" alt="profile of {{contact.name}}" class="_myphoto">
 
                             <!-- user name -->
                             <span>
