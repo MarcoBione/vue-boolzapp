@@ -197,15 +197,22 @@ createApp({
         pushNewMessage() {
 
             //const dt = luxon.DataTime;
+
+            //control for presence of message
+            if(this.writedMex.length > 0){
+
+                //create a message template
+                const newMessageTemplate={
+                    date: '',//dt.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
+                    message: this.writedMex,
+                    status: 'sent',
+                };
+                //push to original array the new message from input
+                this.contacts[this.currentChat].messages.push(newMessageTemplate);
+            }
             
-            const newMessageTemplate={
-                date: '',//dt.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
-                message: this.writedMex,
-                status: 'sent',
-            };           
-            //console.log(this.contacts[this.currentChat].messages);
-            this.contacts[this.currentChat].messages.push(newMessageTemplate);
-            //console.log(this.contacts[this.currentChat].messages);
+            //clean the input bar
+            this.writedMex = '';
         },
 
     }
