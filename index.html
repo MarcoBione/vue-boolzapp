@@ -89,7 +89,8 @@
                     <!-- contact list -->
                     <div class="_mycontacts">
 
-                        <div class="_myprofileinfo" v-for="(contact) in contacts" :key="contact.id" @click="searchIndex(contact.id)">
+                        <div class="_myprofileinfo" v-for="(contact) in contacts" :key="contact.id"
+                            @click="searchIndex(contact.id)">
 
                             <!-- user photo -->
                             <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
@@ -97,7 +98,7 @@
                             <!-- user name -->
                             <span>
                                 <p class="m-0">{{contact.name}}</p>
-                                <small class="m-0 _myminimessagfe">pinco</small>
+                                <small class="m-0 _myminimessagfe">{{lastElement.message}}</small>
                             </span>
 
                         </div>
@@ -113,20 +114,22 @@
                     <!-- profile banner -->
                     <div class="_myprofile d-flex justify-content-between">
 
-                        
+
                         <!-- profile name -->
                         <div class="_myprofileinfo">
 
                             <!-- user photo -->
-                            <img :src="contacts[currentChat].avatar" alt="profile of {{contacts[currentChat].name}}" class="_myphoto">
+                            <img :src="contacts[currentChat].avatar" alt="profile of {{contacts[currentChat].name}}"
+                                class="_myphoto">
 
                             <!-- user name -->
                             <span>
                                 <p class="m-0">{{contacts[currentChat].name}}</p>
+                                <p>{{lastElement}}</p>
                             </span>
 
                         </div>
-                        
+
 
                         <!-- profile icons -->
                         <div class="_myprofileicons">
@@ -156,10 +159,10 @@
                                     <small class="_mydatestring">{{msg.date}}</small>
                                 </div>
                             </li>
-                            
+
 
                         </ul>
-                        
+
                     </div>
                     <!-- /message area -->
 
@@ -168,7 +171,8 @@
 
                         <button class="btn"><i class="fa-regular fa-face-smile"></i></button>
 
-                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio" v-model="writedMex" @keyup.enter="pushNewMessage()">
+                        <input type="text" class="form-control shadow-none" placeholder="Scrivi un messaggio"
+                            v-model="writedMex" @keyup.enter="pushNewMessage()">
 
                         <button class="btn"><i class="fa-solid fa-microphone"></i></button>
 
@@ -186,7 +190,7 @@
     </div>
 
     <!-- luxon -->
-    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <!-- vue -->
     <script src=" https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
     <!-- script main -->

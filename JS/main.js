@@ -1,5 +1,8 @@
 const {createApp} = Vue;
 
+const DateTime = luxon.DateTime;
+const now = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+
 createApp({
 
     data() {
@@ -184,6 +187,8 @@ createApp({
             },
             currentChat: 0,
             writedMex: '', //messaggio scritto dall'utente
+            last:'',
+            lastElement:'',
         }
     },
     methods: {
@@ -195,18 +200,16 @@ createApp({
 
         //display writed mex
         pushNewMessage() {
-
-            let dt = luxon.DataTime;
-
             //control for presence of message
             if(this.writedMex.length > 0){
 
                 //create a message template
                 const newMessageTemplate={
-                    date: 'current date but it does not work',//dt.now().setZone('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    date: now,
                     message: this.writedMex,
                     status: 'sent',
                 };
+                //console.log(this.lastElement);
                 //push to original array the new message from input
                 this.contacts[this.currentChat].messages.push(newMessageTemplate);
             }
@@ -216,13 +219,19 @@ createApp({
 
             //response
             const responseMsg = {
-                    date: 'current date but it does not work',//dt.now().setZone('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    date: now,
                     message: 'top',
                     status: 'recieved',
+                    lastOnline: now,
             }
             setTimeout(()=> {
                 this.contacts[this.currentChat].messages.push(responseMsg);
             },1000);
+
+            //lastMessage
+            //this.last = this.contacts[this.currentChat].messages;
+            //this.lastElement= this.last.pop();
+            //console.log(this.lastElement.message);
         },
 
     }
