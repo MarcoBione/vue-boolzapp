@@ -98,7 +98,7 @@
                             <!-- user name -->
                             <span>
                                 <p class="m-0">{{contact.name}}</p>
-                                <small class="m-0 _myminimessagfe">{{lastElement.message}}</small>
+                                <small class="m-0 _myminimessagfe" v-for="mex in contact.messages.message">{{mex}}</small>
                             </span>
 
                         </div>
