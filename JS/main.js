@@ -182,51 +182,30 @@ createApp({
                 avatar: './img/avatar_1.jpg',
                 visible: true,
             },
-            currentChat: [],
-            currentMsg: [],
-            mex: [],
-
+            currentChat: 0,
             writedMex: '', //messaggio scritto dall'utente
-
-            writedMessages: [],//array dei messaggi scritti da stampare
         }
     },
     methods: {
         //contact index
         searchIndex(id) {
-
-            //array of messages
-            this.mex = [];
-
             //load id of the current chat
             this.currentChat = id;
-            console.log(this.currentChat);
-
-            //cycle msg stamp
-            for (let i = 0; i < this.contacts[this.currentChat].messages.length; i++) {
-
-                this.mex.push(this.contacts[this.currentChat].messages[i]);
-
-            }
-            console.log(this.contacts[this.currentChat].name);
-            //console.log(this.mex);
-            //console.log(this.contacts[this.currentChat].messages);
-
         },
+
         //display writed mex
         pushNewMessage() {
-            const dataT = luxon.DataTime;
+
+            //const dt = luxon.DataTime;
             
             const newMessageTemplate={
-                date: '',//dataT.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
+                date: '',//dt.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
                 message: this.writedMex,
                 status: 'sent',
-            };
-            
+            };           
             //console.log(this.contacts[this.currentChat].messages);
             this.contacts[this.currentChat].messages.push(newMessageTemplate);
             //console.log(this.contacts[this.currentChat].messages);
-
         },
 
     }
