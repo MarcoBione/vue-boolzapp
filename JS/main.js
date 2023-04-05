@@ -7,7 +7,7 @@ createApp({
 
             contacts: [
                 {
-                    id: 1,
+                    id: 0,
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
@@ -30,7 +30,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 2,
+                    id: 1,
                     name: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
@@ -53,7 +53,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: 'Samuele',
                     avatar: './img/avatar_3.jpg',
                     visible: true,
@@ -76,7 +76,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 4,
+                    id: 3,
                     name: 'Alessandro B.',
                     avatar: './img/avatar_4.jpg',
                     visible: true,
@@ -94,7 +94,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 5,
+                    id: 4,
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
@@ -112,7 +112,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 6,
+                    id: 5,
                     name: 'Claudia',
                     avatar: './img/avatar_6.jpg',
                     visible: true,
@@ -135,7 +135,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 7,
+                    id: 6,
                     name: 'Federico',
                     avatar: './img/avatar_7.jpg',
                     visible: true,
@@ -153,7 +153,7 @@ createApp({
                     ],
                 },
                 {
-                    id: 8,
+                    id: 7,
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
@@ -198,20 +198,19 @@ createApp({
             //array of messages
             this.mex = [];
 
-            //load contact profile
+            //load id of the current chat
             this.currentChat = id;
             console.log(this.currentChat);
 
             //cycle msg stamp
             for (let i = 0; i < this.contacts[this.currentChat].messages.length; i++) {
 
-                let msgs = (this.contacts[this.currentChat].messages[i]);
-
-                this.mex.push(msgs);
+                this.mex.push(this.contacts[this.currentChat].messages[i]);
 
             }
-            //console.log(this.msgs);
-            console.log(this.mex);
+            console.log(this.contacts[this.currentChat].name);
+            //console.log(this.mex);
+            //console.log(this.contacts[this.currentChat].messages);
 
         },
         //display writed mex
@@ -224,9 +223,9 @@ createApp({
                 status: 'sent',
             };
             
-            console.log(this.contacts[this.currentChat].messages);
+            //console.log(this.contacts[this.currentChat].messages);
             this.contacts[this.currentChat].messages.push(newMessageTemplate);
-            console.log(this.contacts[this.currentChat].messages);
+            //console.log(this.contacts[this.currentChat].messages);
 
         },
 

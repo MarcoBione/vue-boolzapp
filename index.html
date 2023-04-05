@@ -89,10 +89,10 @@
                     <!-- contact list -->
                     <div class="_mycontacts">
 
-                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id" @click="searchIndex(index)">
+                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id" @click="searchIndex(contact.id)">
 
                             <!-- user photo -->
-                            <img :src="contact.avatar" alt="profile of {{contact[index].name}}" class="_myphoto">
+                            <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
 
                             <!-- user name -->
                             <span>
@@ -117,7 +117,7 @@
                         <div class="_myprofileinfo">
 
                             <!-- user photo -->
-                            <img :src="currentChat.avatar" alt="profile of {{contact.name}}" class="_myphoto">
+                            <img :src="currentChat.avatar" alt="profile of {{currentChat.name}}" class="_myphoto">
 
                             <!-- user name -->
                             <span>
@@ -147,7 +147,7 @@
                     <!-- message area -->
                     <div class="_mymessagearea">
 
-                        <ul class="messages" v-for="msg in mex">
+                        <ul class="messages" v-for="msg in contacts.messages">
 
                             <li class="line d-flex" :class="msg.status === 'sent' ? '_myright' :''">
                                 <div class="mex" :class="msg.status === 'sent' ? '_mysent' : '_myrecieved'">
