@@ -25,8 +25,9 @@
 
 /* profile img */
 ._myprofileinfo {
-    position: relative;
     padding: 5px;
+    display: flex;
+    justify-content: left
 }
 
 ._myprofileinfo:hover {
@@ -35,17 +36,19 @@
 }
 
 ._myprofileinfo>span {
-    position: absolute;
-    top: 25%;
+    text-align: start;
     width: 100px;
     padding-left: 5px;
 }
 
 ._myphoto {
-    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    margin-top: 5px;
 }
-
+._myminimessage{
+    font-size: 0.7rem;
+}
 /* profile img classes end */
 
 /* profile icons */

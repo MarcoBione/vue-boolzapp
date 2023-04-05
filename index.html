@@ -89,7 +89,7 @@
                     <!-- contact list -->
                     <div class="_mycontacts">
 
-                        <div class="_myprofileinfo" v-for="(contact, index) in contacts" :key="contact.id" @click="searchIndex(contact.id)">
+                        <div class="_myprofileinfo" v-for="(contact) in contacts" :key="contact.id" @click="searchIndex(contact.id)">
 
                             <!-- user photo -->
                             <img :src="contact.avatar" alt="profile of {{contact.name}}" class="_myphoto">
@@ -97,7 +97,7 @@
                             <!-- user name -->
                             <span>
                                 <p class="m-0">{{contact.name}}</p>
-                                <p class="m-0">{{contact.messages.message}}</p>
+                                <small class="m-0 _myminimessagfe">pinco</small>
                             </span>
 
                         </div>
