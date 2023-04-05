@@ -105,6 +105,7 @@
     height: calc(100% - 104px);
     background-image: url(../img/mine.jpg);
     padding : 15px 38px 15px 42px;
+    overflow-y: auto;
 }
 
 /* message */

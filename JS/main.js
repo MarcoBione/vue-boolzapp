@@ -196,14 +196,14 @@ createApp({
         //display writed mex
         pushNewMessage() {
 
-            //const dt = luxon.DataTime;
+            let dt = luxon.DataTime;
 
             //control for presence of message
             if(this.writedMex.length > 0){
 
                 //create a message template
                 const newMessageTemplate={
-                    date: '',//dt.now().setLocale('it').toLocaleString(dataTime.DATETIME_SHORT_WITH_SECONDS),
+                    date: 'current date but it does not work',//dt.now().setZone('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: this.writedMex,
                     status: 'sent',
                 };
@@ -213,6 +213,16 @@ createApp({
             
             //clean the input bar
             this.writedMex = '';
+
+            //response
+            const responseMsg = {
+                    date: 'current date but it does not work',//dt.now().setZone('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'top',
+                    status: 'recieved',
+            }
+            setTimeout(()=> {
+                this.contacts[this.currentChat].messages.push(responseMsg);
+            },1000);
         },
 
     }
