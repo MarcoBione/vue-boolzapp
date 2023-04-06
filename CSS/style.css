@@ -139,3 +139,14 @@
 ._mydatestring{
     font-size: 0.7rem;
 }
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: lightgray;
+    border-radius: 5px;
+}

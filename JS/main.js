@@ -227,7 +227,7 @@ createApp({
             }
             setTimeout(()=> {
                 this.contacts[this.currentChat].messages.push(responseMsg);
-            },1000);
+            },3000);
 
             //lastMessage
             //this.last = this.contacts[this.currentChat].messages;
