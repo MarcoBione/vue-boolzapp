@@ -40,6 +40,7 @@
                             <!-- user name -->
                             <span>
                                 <p class="m-0">{{profile.name}}</p>
+                                <p class="m-0 _myminimessage debug">Online</p>
                             </span>
 
                         </div>
@@ -79,17 +80,15 @@
 
                     <!-- search box -->
                     <div class="_mysearchbox input-group">
-                        <span class="input-group-text border-0" id="basic-addon1"><i
-                                class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control shadow-none border-0"
-                            placeholder="Cerca o inizia una nuova chat">
+                        <span class="input-group-text border-0" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" v-model="searchContact" class="form-control shadow-none border-0" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- /search box -->
 
                     <!-- contact list -->
                     <div class="_mycontacts">
 
-                        <div class="_myprofileinfo" v-for="(contact) in contacts" :key="contact.id"
+                        <div class="_myprofileinfo" v-for="contact in contacts.filter(contact => contact.name.toLowerCase().includes(searchContact))" :key="contact.id"
                             @click="searchIndex(contact.id)">
 
                             <!-- user photo -->

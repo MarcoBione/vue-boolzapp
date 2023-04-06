@@ -189,6 +189,7 @@ createApp({
             writedMex: '', //messaggio scritto dall'utente
             last:'',
             lastElement:'',
+            searchContact:'',
         }
     },
     methods: {
