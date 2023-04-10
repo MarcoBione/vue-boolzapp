@@ -1,4 +1,4 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 const DateTime = luxon.DateTime;
 const now = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
@@ -187,9 +187,9 @@ createApp({
             },
             currentChat: 0,
             writedMex: '', //messaggio scritto dall'utente
-            last:'',
-            lastElement:'',
-            searchContact:'',
+            last: '',
+            lastElement: '',
+            searchContact: '',
         }
     },
     methods: {
@@ -202,10 +202,10 @@ createApp({
         //display writed mex
         pushNewMessage() {
             //control for presence of message
-            if(this.writedMex.length > 0){
+            if (this.writedMex.length > 0) {
 
                 //create a message template
-                const newMessageTemplate={
+                const newMessageTemplate = {
                     date: now,
                     message: this.writedMex,
                     status: 'sent',
@@ -213,21 +213,23 @@ createApp({
                 //console.log(this.lastElement);
                 //push to original array the new message from input
                 this.contacts[this.currentChat].messages.push(newMessageTemplate);
-            }
-            
-            //clean the input bar
-            this.writedMex = '';
 
-            //response
-            const responseMsg = {
+                //clean the input bar
+                this.writedMex = '';
+
+                //response
+                const responseMsg = {
                     date: now,
                     message: 'top',
                     status: 'recieved',
                     lastOnline: now,
+                }
+                setTimeout(() => {
+                    this.contacts[this.currentChat].messages.push(responseMsg);
+                }, 3000);
+
             }
-            setTimeout(()=> {
-                this.contacts[this.currentChat].messages.push(responseMsg);
-            },3000);
+
 
             //lastMessage
             //this.last = this.contacts[this.currentChat].messages;
